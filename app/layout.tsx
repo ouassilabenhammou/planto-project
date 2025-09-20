@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+
 import "./globals.css";
 
+import Header from "./components/Header";
+import { inter } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Ouassila - Planto Project",
@@ -14,8 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
+      
+      <body className={`${inter.className} antialiased min-h-screen bg-grey-50 flex flex-col text-white`} style={{backgroundColor: '#1B2316'}}>
+      
+        <Header />
+
+        
+        <main >{children}
+       
+        </main>
       </body>
     </html>
   );
