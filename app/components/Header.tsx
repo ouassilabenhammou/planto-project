@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-
 import { inter } from "../fonts";
 
 const logo = "/images/logo.png";
@@ -16,32 +15,43 @@ const icons = {
 export default function Header() {
   return (
     <header className="text-white opacity-75">
-        <nav className="mx-auto flex max-w-8xl justify-between p-4 "> 
-      {/* Logo */}
-      <div className="flex items-center gap-2">
-        <Image src={logo} alt="Planto logo" width={40} height={40} />
-        <Link href="/" className={`${inter.className} antialiased font-black text-[22px]`}>Planto.</Link>
-      </div>
-
-      {/* Nav links */}
-      <div className="hidden md:flex items-center justify-between gap-10 lg:gap-20 text-[18px] font-medium">
-        <Link href="/">Home</Link>
-
+      <nav className="mx-auto flex max-w-8xl justify-between p-4 ">
+        {/* Logo */}
         <div className="flex items-center gap-2">
-        <Link href="/">Plants Type</Link> <img src={icons.dropdown} alt="dropdown icon" />
+          <Image src={logo} alt="Planto logo" width={40} height={40} />
+          <Link
+            href="/"
+            className={`${inter.className} antialiased font-black text-[22px]`}
+          >
+            Planto.
+          </Link>
         </div>
 
-        <Link href="/">More</Link>
+        {/* Nav links */}
+        <div className="hidden md:flex items-center justify-between gap-10 lg:gap-20 text-[18px] font-medium">
+          <Link href="/">Home</Link>
 
-        <Link href="/">Contact</Link>
-      </div>
+          <div className="flex items-center gap-2">
+            <Link href="/">Plants Type</Link>{" "}
+            <img src={icons.dropdown} alt="dropdown icon" />
+          </div>
 
-      {/* Icons */}
-      <div className="flex items-center gap-10 md:gap-15">
-        <img src={icons.zoeken} alt="zoeken icon" width={24} height={24}/>
-        <img src={icons.winkelmand} alt="winkelmand icon" width={24} height={24}/>
-        <img src={icons.menu} alt="menu icon" width={29} height={11} />
-      </div>
+          <Link href="/">More</Link>
+
+          <Link href="/">Contact</Link>
+        </div>
+
+        {/* Icons */}
+        <div className="flex items-center gap-10 md:gap-15">
+          <img src={icons.zoeken} alt="zoeken icon" width={24} height={24} />
+          <img
+            src={icons.winkelmand}
+            alt="winkelmand icon"
+            width={24}
+            height={24}
+          />
+          <img src={icons.menu} alt="menu icon" width={29} height={11} />
+        </div>
       </nav>
     </header>
   );
