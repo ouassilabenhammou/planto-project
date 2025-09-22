@@ -13,7 +13,7 @@ const socialsIcons = {
 export default function Footer() {
   return (
     <footer
-      className=" text-white font-medium p-4"
+      className=" text-white/75 font-medium p-10"
       style={{ backgroundColor: '#222C1D' }}
     >
       <div className="grid grid-cols-[2fr_1fr_2fr] gap-10 mb-10 mt-10">
@@ -21,11 +21,10 @@ export default function Footer() {
         <div className="flex flex-col gap-5 justify-center">
           <div className="flex items-center ">
             <Image src={logo} alt="logo" width={60} height={70} />
-            <span className="opacity-75">
-              <Link href="/" className="font-black text-3xl">
-                Planto.
-              </Link>
-            </span>
+
+            <Link href="/" className="font-black text-3xl">
+              Planto.
+            </Link>
           </div>
 
           <p>
@@ -49,14 +48,14 @@ export default function Footer() {
         {/* Rechts */}
         <div className="flex flex-col gap-10">
           <p className="font-extrabold">For Every Update.</p>
-          <div className="relative">
+          <div className="md:relative ">
             <input
               type="text"
               placeholder="Enter Email"
-              className="border-white border-1 rounded w-full p-3  "
+              className="border-white border rounded w-full p-3  "
             />
             <button
-              className="uppercase bg-white font-bol p-2 rounded right-1 -translate-y-1/2 top-1/2 absolute"
+              className="uppercase bg-white font-bold p-2 rounded md:right-1 md:-translate-y-1/2 md:top-1/2 md:absolute "
               style={{ color: '#1B2316 ' }}
             >
               Subscribe
